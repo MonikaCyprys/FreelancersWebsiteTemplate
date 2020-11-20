@@ -1,0 +1,6 @@
+// standart setting for absolute Element 
+@mixin absoluteElement {
+   position: absolute;
+   left: 0;
+   top: 0;
+}
