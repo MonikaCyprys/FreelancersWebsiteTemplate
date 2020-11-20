@@ -5,9 +5,16 @@ html {
 }
 
 // ustawiania dla przeglądarki / body
-// body {
-//    // width: 100%;
-//    // height: 100vh;
-//    // background-color: $bg-Color;
-//    // overflow: hidden;
-// }
+
+body {
+   // width: 100%;
+   // height: 100vh;
+   background-color: $bgColor;
+   color: $greyTextColor;
+
+   .wrapper {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+   }
+}

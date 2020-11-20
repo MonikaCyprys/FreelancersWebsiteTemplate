@@ -1,0 +1,62 @@
+.nav {
+   //ma 100% headera - header ma 100% wrappera == od lewej do prawej
+   height: 100%;
+   flex-basis: 100%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+
+   &__menuBtn {
+      flex-basis: 45px;
+      height: 45px;
+      margin-right: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover .nav__menuLine {
+         transform: translateX(0);
+         background-color: #d0d0d0;
+      }
+   }
+
+   &__menuLine {
+      margin: 3px 0;
+      background-color: $greyTextColor;
+      flex-basis: 2px;
+      transition: 0.3s ease;
+
+
+      &:nth-of-type(1) {
+         transform: translateX(60%);
+      }
+
+      &:nth-of-type(2) {
+         transform: translateX(30%);
+      }
+
+
+   }
+
+   &__list {
+      @include absoluteElement;
+      display: flex;
+      flex-direction: column;
+      background-color: $bgColorNav;
+      justify-content: center;
+      // flex-basis: 100vh; // bo jednostka vh nie działa
+      width: 100%;
+      height: 100vh;
+   }
+
+   &__itemList {
+      //tutaj piszemy właściwości nt. elementu a nie w list
+      text-transform: uppercase;
+      padding: 15px;
+      font-size: 3rem;
+      text-align: center;
+      cursor: pointer;
+   }
+}

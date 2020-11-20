@@ -1,8 +1,6 @@
 .header {
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 70px;
+   @include absoluteElement;
+   height: 100px;
    width: 100%;
-   background-color: black;
+   display: flex;
 }
