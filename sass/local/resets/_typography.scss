@@ -2,19 +2,20 @@ html {
    font-size: 10px;
    /*for using REM units*/
    font-family: $mainFont;
+   height: 100%;
 }
 
 // ustawiania dla przeglądarki / body
 
 body {
-   // width: 100%;
-   // height: 100vh;
+   width: 100%;
+   min-height: 100%;
    background-color: $bgColor;
    color: $greyTextColor;
 
    .wrapper {
-      position: relative;
       max-width: 1440px;
       margin: 0 auto;
+      position: relative;
    }
 }

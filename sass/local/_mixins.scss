@@ -1,6 +1,6 @@
 // standart setting for absolute Element 
-@mixin absoluteElement {
+@mixin absoluteElement($left, $top) {
    position: absolute;
-   left: 0;
-   top: 0;
+   left: $left;
+   top: $top;
 }

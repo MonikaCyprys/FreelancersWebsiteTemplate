@@ -1,0 +1,55 @@
+.mainHomePage {
+   height: 100vh;
+   position: relative;
+   display: flex;
+   justify-content: flex-end;
+
+   &__introduceBox {
+      @include absoluteElement($left:0, $top: 50%);
+      transform: translate(-30px, -50%);
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      line-height: 1.8;
+   }
+
+   &__name {
+      font-size: 6.7rem;
+      color: $BrightWhiteColor;
+      font-weight: 700;
+   }
+
+   &__colorName {
+      color: $rasberryColorText;
+   }
+
+   &__proffesion {
+      font-size: 3rem;
+      font-weight: 200;
+      letter-spacing: 1px;
+   }
+
+   &__professions {
+      @extend .mainHomePage__colorName;
+   }
+
+   &__heroImage {
+      flex-basis: 30%;
+      height: 100%;
+   }
+
+   .social {
+      @include absoluteElement($left:35px, $top: 50%);
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+     
+      &__icon {
+         font-size: 2.5rem;
+      padding: 10px;
+
+      }
+   }
+
+}
