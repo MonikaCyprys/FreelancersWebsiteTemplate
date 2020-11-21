@@ -44,11 +44,16 @@
       display: flex;
       flex-direction: column;
       padding: 20px;
-     
+
       &__icon {
          font-size: 2.5rem;
-      padding: 10px;
+         padding: 10px;
+         cursor: pointer;
 
+         &:hover {
+            color: $BrightWhiteColor;
+            transform: scale(1.1);
+         }
       }
    }
 

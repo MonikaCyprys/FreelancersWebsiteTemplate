@@ -52,6 +52,13 @@
       // flex-basis: 100vh; // bo jednostka vh nie działa
       width: 100%;
       height: 100vh;
+      transition: 0.4s ease-out;
+      transform: translateY(-100%);
+      z-index: 97;
+
+      &.isCollapse {
+         transform: translateY(0);
+      }
    }
 
    &__itemList {
@@ -61,5 +68,9 @@
       font-size: 3rem;
       text-align: center;
       cursor: pointer;
+
+      &:hover {
+         color: $BrightWhiteColor;
+      }
    }
 }
