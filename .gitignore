@@ -1,5 +1,8 @@
 # CSS FILES #
-css
+css/
 
 # BUGS_LIST FILE #
 Bug_List
+
+# ALL MINIFIED FILES #
+*.min.*
