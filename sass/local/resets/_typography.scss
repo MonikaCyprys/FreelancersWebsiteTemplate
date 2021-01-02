@@ -10,7 +10,7 @@ html {
 body {
    width: 100%;
    min-height: 100%;
-   color: $greyTextColor;
+   color: $secondaryTextColor;
 
    .wrapper {
       max-width: 1440px;
@@ -18,17 +18,5 @@ body {
       position: relative;
       background-color: #1b1612;
       overflow-x: hidden;
-
-      .changePageEffect {
-         width: 100%;
-         height: 100vh;
-         background-color: $rasberryColorText;
-         position: fixed;
-         left: -120%;
-         top: 0;
-         transition: 0.9s linear;
-         transform: skew(-20deg);
-         z-index: 99;
-      }
    }
 }

@@ -27,7 +27,7 @@
 
          h2 {
             font-size: 2.5rem;
-            color: $BrightWhiteColor;
+            color: $primarTextColor;
             text-transform: capitalize;
             text-align: center;
             line-height: 80px;
@@ -41,13 +41,13 @@
             justify-content: space-between;
 
             .custom-field {
-               background-color: $bgColorNav;
+               background-color: $bgColorSecond;
                border: none;
                padding: 15px;
                font-size: 1.7rem;
                margin: 15px 0;
                border-radius: 10px;
-               color: $greyTextColor;
+               color: $secondaryTextColor;
             }
 
             .form-name {
@@ -70,12 +70,12 @@
             }
 
             .form-btn {
-               background-color: $rasberryColorText;
+               background-color: $accentColor;
                border: none;
                margin: 15px auto;
                padding: 10px 20px;
                font-size: 1.7rem;
-               color: $bgColorDarker;
+               color: $bgColorSecond;
                border-radius: 10px;
                justify-self: self-end;
                cursor: pointer;
@@ -111,7 +111,7 @@
             flex-basis: 80px;
             line-height: 80px;
             font-size: 2.5rem;
-            color: $BrightWhiteColor;
+            color: $primarTextColor;
             text-transform: capitalize;
             text-align: center;
          }
@@ -132,7 +132,7 @@
                }
 
                h3 {
-                  color: $BrightWhiteColor;
+                  color: $primarTextColor;
                   font-size: 1.7rem;
                   margin-left: 15px;
                   line-height: 1.5;

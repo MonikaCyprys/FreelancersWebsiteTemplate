@@ -1,5 +1,5 @@
 %colorWord {
-   color: $rasberryColorText;
+   color: $accentColor;
 }
 
 main {
@@ -14,7 +14,7 @@ main {
    width: 100%;
    @include position(relative, unset, unset, unset, unset);
    display: flex;
-   background-image: linear-gradient(#28201f, #241b20, #1b1612 78%);
+   background-image: linear-gradient(#28201f, #241b20, $bgColor 78%);
 
 
 
@@ -28,7 +28,7 @@ main {
 
       h1 {
          font-size: 6.7rem;
-         color: $BrightWhiteColor;
+         color: $primarTextColor;
          font-weight: 700;
          transform: scale(.7);
          transition: 0.9s ease-out;
@@ -56,10 +56,6 @@ main {
       }
 
       .message-me {
-         // @include size-section(170px, 70px);
-         // font-size: 2rem;
-         // color: $rasberryColorText;
-         // border: solid 1px $rasberryColorText;
          @include button;
       }
 
@@ -83,7 +79,7 @@ main {
          cursor: pointer;
 
          &:hover {
-            color: $BrightWhiteColor;
+            color: $primarTextColor;
          }
 
       }

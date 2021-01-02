@@ -26,8 +26,8 @@
    padding: $pad;
    text-align: center;
    text-transform: capitalize;
-   border: 1px solid $rasberryColorText;
-   color: $rasberryColorText;
+   border: 1px solid $accentColor;
+   color: $accentColor;
    @include position(relative, unset, unset, unset, unset);
    z-index: 1;
    overflow: hidden;
@@ -38,7 +38,7 @@
    }
 
    &:hover {
-      color: $bgColorDarker;
+      color: $bgColorSecond;
    }
 
    &::after {
@@ -47,7 +47,7 @@
       @include position(absolute, 0, auto, auto, 0);
       width: 120%;
       height: 100%;
-      background-color: $rasberryColorText;
+      background-color: $accentColor;
       transform: skew(20deg) translateX(-120%);
       z-index: -1;
       transition: 0.8s ease;

@@ -24,12 +24,12 @@ main.about-page {
          h2 {
             font-size: 3.5rem;
             line-height: 1.5;
-            color: $BrightWhiteColor;
+            color: $primarTextColor;
             padding-bottom: 15px;
             letter-spacing: 1px;
 
             span {
-               color: $rasberryColorText;
+               color: $accentColor;
             }
          }
 
@@ -42,12 +42,13 @@ main.about-page {
          .about-cv {
             width: 170px;
             height: 70px;
-            background-color: $rasberryColorText;
+            background-color: $accentColor;
             font-size: 1.7rem;
             margin: 50px auto;
             padding: 5px 10px;
-            color: $bgColorDarker;
+            color: $bgColorSecond;
             border-radius: 5px;
+            font-weight: bolder;
          }
       }
 
@@ -66,7 +67,7 @@ main.about-page {
       .about-service {
          flex-basis: 30%;
          border-radius: 10px;
-         background-color: $bgColorNav;
+         background-color: $bgColorSecond;
          display: flex;
          height: 360px;
          flex-direction: column;
@@ -87,18 +88,18 @@ main.about-page {
             flex-basis: 100px;
             line-height: 100px;
             border-radius: 10px;
-            color: $bgColorDarker;
-            background-color: $rasberryColorText;
+            color: $bgColorSecond;
+            background-color: $accentColor;
             transition: all 1s ease;
-            border: 0 solid $rasberryColorText;
-            box-shadow: 0px 0px 0px 0px $rasberryColorText;
+            border: 0 solid $accentColor;
+            box-shadow: 0px 0px 0px 0px $accentColor;
          }
 
          h3 {
             padding: 15px 0;
             font-size: 2.5rem;
             text-align: center;
-            color: $BrightWhiteColor;
+            color: $primarTextColor;
          }
 
          p {
@@ -135,7 +136,7 @@ main.about-page {
             flex-basis: 100%;
             text-align: center;
             font-size: 2rem;
-            color: $BrightWhiteColor;
+            color: $primarTextColor;
             padding: 25px;
          }
       }
