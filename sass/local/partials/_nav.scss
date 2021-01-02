@@ -6,45 +6,47 @@
    justify-content: flex-end;
    align-items: center;
 
-   &__menuBtn {
+   //!zmienić menu-btn (kreseczki)
+   .menu-btn {
       flex-basis: 40px;
       height: 40px;
-      margin-right: 50px;
+      margin-right: 60px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       overflow: hidden;
       cursor: pointer;
+      @include position(relative, unset, unset, unset, unset);
       z-index: 99;
+      transition: 0.8s ease-out;
 
-      &:hover .nav__menuLine {
+      &:hover .menu-line,
+      &:hover .menu-line:nth-of-type(1),
+      &:hover .menu-line:nth-of-type(2) {
          transform: translateX(0);
          background-color: $BrightWhiteColor;
-         // box-shadow: 0 0 30px $BrightWhiteColor; 
+         // box-shadow: 0 0 30px $BrightWhiteColor;
 
+      }
+
+      .menu-line {
+         margin: 3px 0;
+         background-color: $greyTextColor;
+         flex-basis: 2px;
+         transition: 0.3s ease;
+
+         &:nth-of-type(1) {
+            transform: translateX(60%);
+         }
+
+         &:nth-of-type(2) {
+            transform: translateX(30%);
+         }
       }
    }
 
-   &__menuLine {
-      margin: 3px 0;
-      background-color: $greyTextColor;
-      flex-basis: 2px;
-      transition: 0.3s ease;
-
-
-      &:nth-of-type(1) {
-         transform: translateX(60%);
-      }
-
-      &:nth-of-type(2) {
-         transform: translateX(30%);
-      }
-
-
-   }
-
-   &__list {
-      @include absoluteElement($left: 0, $top:0);
+   .pages-list {
+      @include position(absolute, 0, auto, auto, 0);
       display: flex;
       flex-direction: column;
       background-color: $bgColorNav;
@@ -52,25 +54,77 @@
       // flex-basis: 100vh; // bo jednostka vh nie działa
       width: 100%;
       height: 100vh;
-      transition: 0.4s ease-out;
+      transition: 0.5s ease-out;
       transform: translateY(-100%);
-      z-index: 97;
+      z-index: 95;
+      overflow: hidden;
 
       &.isCollapse {
          transform: translateY(0);
       }
-   }
 
-   &__itemList {
-      //tutaj piszemy właściwości nt. elementu a nie w list
-      text-transform: uppercase;
-      padding: 15px;
-      font-size: 3rem;
-      text-align: center;
-      cursor: pointer;
+      .item-list {
+         //tutaj piszemy właściwości nt. elementu a nie w list
+         text-transform: uppercase;
+         padding: 15px;
+         font-size: 3rem;
+         text-align: center;
+         cursor: pointer;
 
-      &:hover {
-         color: $BrightWhiteColor;
+         a {
+            @include position(relative, unset, unset, unset, unset);
+            z-index: 99;
+         }
+
+         &:hover {
+            color: $rasberryColorText;
+         }
+
+         &:hover::after {
+            letter-spacing: 8px;
+            opacity: 0.2;
+         }
+
+         &::after {
+            content: attr(data-section);
+            display: block;
+            opacity: 0;
+            font-size: 17rem;
+            letter-spacing: 200px;
+            text-transform: uppercase;
+            text-align: center;
+            color: $rasberryColorText;
+            transition: 0.5s ease;
+            @include position(fixed, 50%, auto, auto, 50%);
+            transform: translate(-50%, -50%);
+            z-index: -2;
+            pointer-events: none;
+            font-family: $threeLineFont;
+         }
+
+         // .pages-name {
+         //    position: fixed;
+         //    top: 50%;
+         //    left: 50%;
+         //    z-index: 96;
+         //    transition: 0.5s ease;
+         //    transform: translate(-50%, -50%);
+         //    color: $greyColor;
+         //    font-size: 17rem;
+         //    font-family: $threeLineFont;
+         //    letter-spacing: 200px;
+         //    text-transform: uppercase;
+         //    text-align: center;
+         //    opacity: 0;
+
+         //    &.ismallSpacing {
+         //       letter-spacing: 8px;
+         //       opacity: 1;
+         //    }
+
+         // }
       }
+
    }
+
 }

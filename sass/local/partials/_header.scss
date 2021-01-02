@@ -1,6 +1,33 @@
 .header {
-   @include absoluteElement($left: 0, $top:0);
+   @include position(absolute, 0, auto, auto, 0);
    height: 100px;
    width: 100%;
    display: flex;
+   transition: 0.8s ease-out;
+
+   &::after {
+      content: "";
+      display: block;
+      background-color: $rasberryColorText;
+      transform: translateY(-50%);
+      @include position(absolute, 50%, 0, auto, auto);
+      width: 25px;
+      height: 25px;
+      opacity: 0;
+   }
+
+   &.isSticky {
+      @include position(fixed, 0, auto, auto, 0);
+      height: 100px;
+      width: 100%;
+      z-index: 99;
+
+      &::after {
+         opacity: 1;
+      }
+
+      .menu-btn {
+         margin-right: 40px;
+      }
+   }
 }

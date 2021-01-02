@@ -1,0 +1,7 @@
+footer {
+   @include size-section(80%, 80px);
+   text-align: center;
+   font-size: 1.8rem;
+   line-height: 80px;
+   border-top: solid 2px $bgColorNav;
+}

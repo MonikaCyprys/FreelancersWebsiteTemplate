@@ -1,0 +1,87 @@
+.portfolio-page {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   background-color: $bgColor;
+   // @include position(absolute, 0, auto, auto, 0);
+   padding-bottom: 70px;
+
+   .header-section {
+      @extend %header-for-section;
+   }
+
+   .portfolio-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 88%;
+      margin: 0 auto;
+      min-height: 100vh;
+
+      .portfolio-post {
+         flex-basis: 86%;
+         margin: 30px auto 120px auto;
+         display: flex;
+         height: 75vh;
+         @include position(relative, unset, unset, unset, unset);
+
+         &:nth-of-type(1) .portfolio-img {
+            @include bg-image(url(../../../../img/photo-sessions.jpg), left center, no-repeat);
+         }
+
+         &:nth-of-type(2) .portfolio-img {
+            @include bg-image(url(../../../../img/photo-design.jpg), center, no-repeat);
+         }
+
+         &:nth-of-type(3) .portfolio-img {
+            @include bg-image(url(../../../../img/photo-product.jpg), bottom center, no-repeat);
+         }
+
+
+         .portfolio-img {
+            flex-basis: 55%;
+            overflow: hidden;
+            border-radius: 10px;
+
+
+
+            .portfolio-name {
+               @include position(absolute, 45px, auto, auto, 0);
+               color: $rasberryColorText;
+               background-color: rgba($bgColor, 0.6);
+               border: 1px solid $rasberryColorText;
+               padding: 20px 10px;
+               font-size: 2.7rem;
+            }
+
+         }
+
+         .portfolio-info {
+            width: 50%;
+            height: 290px;
+            background-color: $bgColorNav;
+            @include position(relative, unset, 60px, -210px, unset);
+            padding: 30px;
+            border: 1px solid $rasberryColorText;
+            display: flex;
+            flex-wrap: wrap; //! tu skończyłaś Monek
+
+            p {
+               font-size: 1.8rem;
+               line-height: 1.4;
+               width: 100%;
+               padding: 15px 0;
+               text-align: center
+            }
+
+            span {
+               color: $rasberryColorText;
+            }
+
+            .portfolio-btn {
+               @include button;
+            }
+         }
+
+      }
+   }
+}

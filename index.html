@@ -8,49 +8,60 @@
     <meta description content="Jestem instruktorem strzelectwa z wieloletnim doświadczeniem w branży militarnej">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
     <script src="https://kit.fontawesome.com/c2672b97d2.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
+<body onload="enlargeHeroImage()">
     <div class="wrapper">
+        <div class="changePageEffect"></div>
         <header class="header">
 
             <!-- logo i inne pierdoły -->
 
-            <nav class="header__nav nav">
+            <nav class="nav">
 
-                <div class="nav__menuBtn">
-                    <div class="nav__menuLine"></div>
-                    <div class="nav__menuLine"></div>
-                    <div class="nav__menuLine"></div>
+                <div class="menu-btn">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
                 </div>
-
-
-                <ul class="nav__list">
-                    <li class="nav__itemList">strona główna</li>
-                    <li class="nav__itemList">o mnie</li>
-                    <li class="nav__itemList">współpraca</li>
-                    <li class="nav__itemList">kontakt</li>
+                <ul class="pages-list">
+                    <li data-section="home" class="item-list"><a href="#">home</a></li>
+                    <li data-section="about" class="item-list"><a href="about.html">about</a></li>
+                    <li data-section="blog" class="item-list"><a href="blog.html">blog</a></li>
+                    <li data-section="portfolio" class="item-list"><a href="portfolio.html">portfolio</a></li>
+                    <li data-section="contact" class="item-list"><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
 
         </header>
 
-        <main class="mainHomePage">
-            <img class="mainHomePage__heroImage" src="img/man.jpg" alt="">
-            <article class="mainHomePage__introduceBox">
-                <h1 class="mainHomePage__name"><span class="mainHomePage__colorName">Arlo</span> Brown</h1>
-                <h2 class="mainHomePage__proffesion">I'm <span class="mainHomePage__professions">freelancer</span>
-                </h2>
-            </article>
-            <section class="mainHomePage__social social">
-                <i class="social__icon fab fa-facebook-square"></i>
-                <i class="social__icon fab fa-linkedin"></i>
+        <!--? one main must be -->
+        <main>
+            <section data-section="home" class="home-page">
+                <article class="social">
+                    <i title="Pinterest" class="fab fa-pinterest-square"></i>
+                    <i title="Facebook" class="fab fa-facebook-square"></i>
+                    <i title="Linkedin" class="fab fa-linkedin"></i>
+                    <i title="Instagram" class="fab fa-instagram"></i>
+                </article>
+                <article class="header-section">
+                    <h1><span>Elaine Grenouille</span></h1>
+                    <h2>I'm Freelancer.</h2>
+                    <a href="contact.html" class="message-me">Message me!</a>
+                </article>
+
+                <img rel="https://www.pexels.com/pl-pl/zdjecie/osoba-kobieta-model-modelka-3270230/" class="hero-image"
+                    src="img/hero-image.jpg" alt="">
             </section>
         </main>
     </div>
+
     <script src="javascript/script.js"></script>
 </body>
 

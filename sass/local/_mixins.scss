@@ -1,6 +1,63 @@
-// standart setting for absolute Element 
-@mixin absoluteElement($left, $top) {
-   position: absolute;
-   left: $left;
+/* Shorthand mixin for offset positioning */
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+   position: $position;
    top: $top;
+   right: $right;
+   bottom: $bottom;
+   left: $left;
+}
+
+/* size of elements */
+@mixin size-section($width, $height) {
+   width: $width;
+   height: $height;
+
+   @if $width !=100% {
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
+
+@mixin button($size:140px, $margin: 20px auto, $pad: 15px 5px, $transf:translateX(-15px)) {
+   display: block;
+   font-size: 1.7rem;
+   width: $size;
+   margin: $margin;
+   padding: $pad;
+   text-align: center;
+   text-transform: capitalize;
+   border: 1px solid $rasberryColorText;
+   color: $rasberryColorText;
+   @include position(relative, unset, unset, unset, unset);
+   z-index: 1;
+   overflow: hidden;
+   transition: 0.8s ease;
+
+   &:hover::after {
+      transform: skew(20deg) $transf;
+   }
+
+   &:hover {
+      color: $bgColorDarker;
+   }
+
+   &::after {
+      content: '';
+      display: block;
+      @include position(absolute, 0, auto, auto, 0);
+      width: 120%;
+      height: 100%;
+      background-color: $rasberryColorText;
+      transform: skew(20deg) translateX(-120%);
+      z-index: -1;
+      transition: 0.8s ease;
+   }
+
+}
+
+@mixin bg-image($url, $position, $repeat, $size:cover) {
+   background-image: $url;
+   background-position: $position;
+   background-repeat: $repeat;
+   background-size: $size;
 }
