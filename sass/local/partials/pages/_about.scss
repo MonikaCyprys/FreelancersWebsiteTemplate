@@ -3,7 +3,6 @@ main.about-page {
    flex-wrap: wrap;
    flex-direction: column;
    @include size-section(86%, auto);
-   // @include position(absolute, 0, auto, auto, 0);
 
    .header-section {
       @extend %header-for-section;
@@ -11,15 +10,16 @@ main.about-page {
 
    .introduce-box {
       display: flex;
-      margin: 30px auto auto auto;
-      align-items: flex-start;
+      @include position(relative);
 
       .about-notes {
-         width: 50%;
+         flex-basis: 50%;
+         height: 100%;
          padding-top: 10px;
          padding-right: 20px;
          display: flex;
          flex-wrap: wrap;
+         flex-grow: 0;
 
          h2 {
             font-size: 3.5rem;
@@ -52,17 +52,34 @@ main.about-page {
          }
       }
 
+      @media screen and (max-width: 670px) {
+         .about-notes {
+            flex-grow: 1;
+
+            h2,
+            p {
+               text-align: center;
+            }
+         }
+      }
+
       .about-img {
-         width: 45%;
+         flex-basis: 47%;
          height: 650px;
          @include bg-image(url(../../../../img/photo-about.jpg), center, no-repeat, cover);
       }
+
+      @media screen and (max-width: 670px) {
+         .about-img {
+            display: none;
+         }
+      }
+
+
    }
 
    .about-services {
       display: flex;
-      margin: 30px auto auto auto;
-      justify-content: space-between;
 
       .about-service {
          flex-basis: 30%;
@@ -75,7 +92,7 @@ main.about-page {
          padding: 20px;
          justify-content: space-evenly;
          overflow: hidden;
-         margin: 0 30px;
+         margin: 30px;
 
          &:hover i {
             box-shadow: 0px 0px 0px 500px $bgColor;
@@ -108,7 +125,27 @@ main.about-page {
             line-height: 1.5;
             text-align: center;
          }
+      }
 
+
+   }
+
+   @media screen and (max-width: 1000px) {
+      .about-services {
+         flex-wrap: wrap;
+         justify-content: space-evenly;
+
+         .about-service {
+            flex-basis: 45%;
+            margin: 30px 0;
+         }
+      }
+
+      @media screen and (max-width: 640px) {
+         .about-services .about-service {
+            flex-basis: 80%;
+            margin: 30px 0;
+         }
       }
    }
 
@@ -140,5 +177,14 @@ main.about-page {
             padding: 25px;
          }
       }
+
+      @media screen and (max-width: 450px) {
+         .about-skill {
+            flex-basis: 80%;
+         }
+
+      }
    }
+
+
 }

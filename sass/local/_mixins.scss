@@ -8,7 +8,7 @@
 }
 
 /* size of elements */
-@mixin size-section($width, $height) {
+@mixin size-section($width, $height: auto) {
    width: $width;
    height: $height;
 
@@ -28,7 +28,7 @@
    text-transform: capitalize;
    border: 1px solid $accentColor;
    color: $accentColor;
-   @include position(relative, unset, unset, unset, unset);
+   @include position(relative);
    z-index: 1;
    overflow: hidden;
    transition: 0.8s ease;
