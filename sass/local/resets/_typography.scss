@@ -8,8 +8,9 @@ html {
 // ustawiania dla przeglądarki / body
 
 body {
-   width: 100%;
-   min-height: 100%;
+   // width: 100%;
+   // min-height: 100%;
+
    color: $secondaryTextColor;
    // background-color: $bgColor;
 
@@ -17,6 +18,7 @@ body {
       max-width: 1440px;
       margin: 0 auto;
       position: relative;
+      z-index: 5;
       background-color: #1b1612;
       overflow-x: hidden;
    }

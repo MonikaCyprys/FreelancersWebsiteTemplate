@@ -1,16 +1,41 @@
 .nav {
-   //ma 100% headera - header ma 100% wrappera == od lewej do prawej
    height: 100%;
    flex-basis: 100%;
+   position: sticky;
+   top: 0;
+   max-width: 1440px;
+   margin: 0 auto;
    display: flex;
-   justify-content: flex-end;
    align-items: center;
 
-   //!zmienić menu-btn (kreseczki)
+   &::after {
+      content: "";
+      display: block;
+      background-color: $accentColor;
+      transform: translateY(-50%);
+      @include position(absolute, 50%, 0, auto, auto);
+      width: 25px;
+      height: 25px;
+      opacity: 0;
+      z-index: 99;
+   }
+
+   &.isSticky {
+
+      &::after {
+         opacity: 1;
+      }
+
+      .menu-btn {
+         margin-right: 40px;
+      }
+   }
+
    .menu-btn {
       flex-basis: 40px;
       height: 40px;
       margin-right: 60px;
+      margin-left: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -19,6 +44,9 @@
       @include position(relative);
       z-index: 99;
       transition: 0.8s ease-out;
+      pointer-events: all;
+
+
 
       &:hover .menu-line,
       &:hover .menu-line:nth-of-type(1),
@@ -26,7 +54,6 @@
          transform: translateX(0);
          background-color: $primarTextColor;
          // box-shadow: 0 0 30px $primarTextColor;
-
       }
 
       .menu-line {
@@ -42,6 +69,10 @@
          &:nth-of-type(2) {
             transform: translateX(30%);
          }
+
+         &.btn-active {
+            transform: translateX(0);
+         }
       }
    }
 
@@ -51,13 +82,13 @@
       flex-direction: column;
       background-color: $bgColorSecond;
       justify-content: center;
-      // flex-basis: 100vh; // bo jednostka vh nie działa
       width: 100%;
       height: 100vh;
       transition: 0.6s ease-out;
       transform: translateY(-100%);
       z-index: 95;
       overflow: hidden;
+      pointer-events: all;
 
       &.isCollapse {
          transform: translateY(0);
@@ -100,6 +131,13 @@
             z-index: -2;
             pointer-events: none;
             font-family: $threeLineFont;
+         }
+
+      }
+
+      @media screen and (max-width: 810px) {
+         .item-list:hover::after {
+            opacity: 0;
          }
       }
    }

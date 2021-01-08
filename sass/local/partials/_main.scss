@@ -4,14 +4,13 @@
 
 main {
    width: 100%;
-   // min-height: 100vh;
    position: relative;
 }
 
 .home-page {
    height: 100vh;
    width: 100%;
-   @include position(relative);
+   z-index: 1;
    display: flex;
    background-image: linear-gradient(#28201f, #241b20, $bgColor 78%);
 
@@ -30,7 +29,7 @@ main {
          padding: 0 20px;
 
          &.isEnlarge {
-            transform: scale(1.05);
+            transform: scale(1);
 
             span {
                text-shadow: 2px 2px 120px #feb600;

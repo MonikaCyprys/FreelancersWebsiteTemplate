@@ -13,13 +13,17 @@ function showUpNav() {
 
    const navList = document.querySelector(".pages-list");
    const menuBtn = document.querySelector(".menu-btn");
+   const lines = [...document.querySelectorAll(".menu-line")];
 
    menuBtn.addEventListener("click", function()  {
       navList.classList.toggle("isCollapse");
+      lines.forEach(line => {
+          line.classList.toggle("btn-active");
+      })
    });
 };
 
-const header = document.querySelector(".header");
+const header = document.querySelector("nav");
 let scrollValue
 
 function getStickyNav() {
