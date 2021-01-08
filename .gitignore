@@ -1,5 +1,8 @@
-# CSS FILES #
-css/
+# SASS FILES #
+sass/
+
+# CSS FILE MAP #
+css/app.css.map
 
 # BUGS_LIST FILE #
 Bug_List
