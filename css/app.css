@@ -857,7 +857,7 @@ main.about-page .introduce-box .about-img {
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
   height: 650px;
-  background-image: url(../../../../img/photo-about.jpg);
+  background-image: url(../img/photo-about.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1248,21 +1248,21 @@ main.about-page .about-skills .about-skill figcaption {
 }
 
 .portfolio-page .portfolio-list .portfolio-post:nth-of-type(1) .portfolio-img {
-  background-image: url(../../../../img/photo-sessions.jpg);
+  background-image: url(../img/photo-sessions.jpg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .portfolio-page .portfolio-list .portfolio-post:nth-of-type(2) .portfolio-img {
-  background-image: url(../../../../img/photo-design.jpg);
+  background-image: url(../img/photo-design.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .portfolio-page .portfolio-list .portfolio-post:nth-of-type(3) .portfolio-img {
-  background-image: url(../../../../img/photo-product.jpg);
+  background-image: url(../img/photo-product.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1574,7 +1574,7 @@ main.about-page .about-skills .about-skill figcaption {
 .contact-page .contact-box .contact-info {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
-  background: url(../../../../img/photo-contact.jpg);
+  background: url(../img/photo-contact.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
