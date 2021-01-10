@@ -1,9 +1,13 @@
 // ----------------------
 //   INVOKING FUNCTIONS
 // ----------------------
+window.addEventListener('load', init)
+document.addEventListener("scroll", getStickyNav);
 
-showUpNav();
-document.addEventListener("scroll", getStickyNav) 
+function init() {
+    enlargeHeaderText();
+    showUpNav();
+}
 
 // ----------------------
 //      NAVIGATION
