@@ -270,7 +270,6 @@ template {
 
 html {
   font-size: 10px;
-  /*for using REM units*/
   font-family: "Poppins", sans-serif;
   height: 100%;
 }
@@ -516,10 +515,6 @@ main.about-page .header-section span, .blog-page .header-section span, .portfoli
   }
 }
 
-.home-page .header-section span {
-  color: #feb611;
-}
-
 main {
   width: 100%;
   position: relative;
@@ -575,6 +570,7 @@ main {
 }
 
 .home-page .header-section span {
+  color: #feb611;
   -webkit-transition-delay: 0.9s;
           transition-delay: 0.9s;
   -webkit-transition: 0.9s;
