@@ -276,14 +276,18 @@ html {
 
 body {
   color: #9f9f9f;
+  background-color: #1b1612;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#28201f), color-stop(#241b20), color-stop(78%, #1b1612));
+  background-image: linear-gradient(#28201f, #241b20, #1b1612 78%);
+  background-repeat: no-repeat;
 }
 
 body .wrapper {
-  max-width: 1440px;
+  max-width: 1740px;
+  height: fit-content;
   margin: 0 auto;
   position: relative;
   z-index: 5;
-  background-color: #1b1612;
   overflow-x: hidden;
 }
 
@@ -527,8 +531,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#28201f), color-stop(#241b20), color-stop(78%, #1b1612));
-  background-image: linear-gradient(#28201f, #241b20, #1b1612 78%);
+
 }
 
 .home-page .header-section {
@@ -1347,7 +1350,6 @@ main.about-page .about-skills .about-skill figcaption {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1b1612;
   padding-bottom: 70px;
 }
 
@@ -1585,9 +1587,7 @@ main.about-page .about-skills .about-skill figcaption {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1b1612;
   width: 88%;
-  height: auto;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 70px;
@@ -1641,8 +1641,7 @@ main.about-page .about-skills .about-skill figcaption {
 }
 
 .contact-page .contact-box .contact-form form .custom-field {
-  background-color: #221a1d;
-  border: none;
+  background-color: #1a1215;
   padding: 15px;
   font-size: 1.7rem;
   margin: 15px 0;
@@ -1669,7 +1668,6 @@ main.about-page .about-skills .about-skill figcaption {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   resize: none;
-  border: none;
   height: 150px;
 }
 
